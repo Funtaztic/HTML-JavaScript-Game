@@ -19,7 +19,11 @@ HP = 100
 XP = 0
 MONEY = 0
 
+def just_a_list_of_stages:
+    print 
+
 def Quasimodo():
+    stats_print()
     print "Hi, I'm Quasimodo. Do you want to go inside? (yes/no)"
     Quasimodo_answer = raw_input()
     if Quasimodo_answer == "yes":
@@ -30,6 +34,7 @@ def Quasimodo():
         end_game()
 
 def end_game():
+    stats_print()
     print "Press Enter to close window."
     end_game = raw_input()
 
@@ -38,5 +43,4 @@ def stats_print():
     print "XP:      %r" %XP
     print "MONEY:   %r" %MONEY
 
-stats_print()
 Quasimodo()
