@@ -17,12 +17,18 @@ HP = 100
 XP = 0
 MONEY = 0
 
-def Quasimodo:
+def Quasimodo():
     print "Hi, I'm Quasimodo. Do you want to go inside?"
     Quasimodo_answer = raw_input()
-    if Quasimodo_answer = "yes":
+    if Quasimodo_answer == "yes":
         print "You are in! :D"
+        end_game()
     else:
         print "Then why are you here?"
+        end_game()
 
-Quasimodo
+def end_game():
+    print "Press Enter to close window."
+    end_game = raw_input()
+
+Quasimodo()
