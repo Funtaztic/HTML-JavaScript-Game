@@ -18,7 +18,7 @@ XP = 0
 MONEY = 0
 
 def Quasimodo():
-    print "Hi, I'm Quasimodo. Do you want to go inside?"
+    print "Hi, I'm Quasimodo. Do you want to go inside? (yes/no)"
     Quasimodo_answer = raw_input()
     if Quasimodo_answer == "yes":
         print "You are in! :D"
