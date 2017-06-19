@@ -10,7 +10,9 @@
 # Give them alcohol? - makes happy, more likely to say dumb shit.
 # Likelyhood: random choice out of 10(0), (7xYes + 3xNo = 70% chance.)
 # Variables: Happy = 1 Helpful = 1 ---> =2. If sum >=2, big help comes.
-
+# Stats print loop: print stats, run a function, stats, then another function.
+#   Make a variable: storyline. add +1 to proceed to next one? (bad idea?)
+#       or just include stats_print in all functions.
 
 # Variables:
 HP = 100
