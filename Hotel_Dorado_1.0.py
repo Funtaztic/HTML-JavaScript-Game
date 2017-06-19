@@ -31,4 +31,10 @@ def end_game():
     print "Press Enter to close window."
     end_game = raw_input()
 
+def stats_print():
+    print "HP:      %r" %HP
+    print "XP:      %r" %XP
+    print "MONEY:   %r" %MONEY
+
+stats_print()
 Quasimodo()
