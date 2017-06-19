@@ -3,8 +3,26 @@
 # collectibles and more. Gain XP, save HP, have FUN! =D
 # (listening to GameOfThrones music)...make them LIE! xD
 # The player can not trust anyone! (after enough interactions)
+# 'You can only ask 1 question'-type of characters.
+# Moody characters, if (s)he's happy, will help you more.
+# Lie-detector / Truth serum. (you know how it works)
+# Give items (presents) to characters, make them happy.
+# Give them alcohol? - makes happy, more likely to say dumb shit.
+# Likelyhood: random choice out of 10(0), (7xYes + 3xNo = 70% chance.)
+# Variables: Happy = 1 Helpful = 1 ---> =2. If sum >=2, big help comes.
+
 
 # Variables:
 HP = 100
 XP = 0
 MONEY = 0
+
+def Quasimodo:
+    print "Hi, I'm Quasimodo. Do you want to go inside?"
+    Quasimodo_answer = raw_input()
+    if Quasimodo_answer = "yes":
+        print "You are in! :D"
+    else:
+        print "Then why are you here?"
+
+Quasimodo
