@@ -39,6 +39,15 @@ def Quasimodo():
         print "Then why are you here?"
         end_game()
 
+def give_me_money():
+    while True:
+        print "Please give me money!"
+        print "How much would you give? :)"
+        money_given = int(raw_input())
+        print money_given
+        money_given = money_given + 64321351
+        print money_given
+
 def end_game():
     stats_print()
     print "Press Enter to close window."
@@ -49,5 +58,6 @@ def stats_print():
     print "XP:      %r" %XP
     print "MONEY:   %r" %MONEY
 
+give_me_money()
 just_a_list_of_stages()
 Quasimodo()
