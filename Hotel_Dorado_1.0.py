@@ -20,7 +20,12 @@ XP = 0
 MONEY = 0
 
 def just_a_list_of_stages():
-    print 
+    print "---------------"
+    print "Stages of the game:"
+    print "Quasimodo"
+    print "end_game"
+    print "stats_print"
+    print "---------------"
 
 def Quasimodo():
     stats_print()
@@ -43,4 +48,5 @@ def stats_print():
     print "XP:      %r" %XP
     print "MONEY:   %r" %MONEY
 
+just_a_list_of_stages()
 Quasimodo()
