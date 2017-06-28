@@ -44,6 +44,7 @@ def Quasimodo():
         end_game()
 
 def give_me_money():
+    global MONEY
     while True:
         print "Please give me money!"
         print "How much would you give? :)"
