@@ -16,9 +16,13 @@
 #       or just include stats_print in all functions.
 
 # Variables:
+global HP
 HP = 100
+global XP
 XP = 0
-MONEY = 0
+global MONEY
+MONEY = 100
+money_given = 0
 
 def just_a_list_of_stages():
     print "---------------"
@@ -44,10 +48,11 @@ def give_me_money():
         print "Please give me money!"
         print "How much would you give? :)"
         money_given = int(raw_input())
-        print money_given
-        money_given = money_given + 64321351
-        print money_given
-
+        MONEY = MONEY - money_given
+        print "HAHAHAH! I have %r money now!" % money_given
+        stats_print()
+        
+        
 def end_game():
     stats_print()
     print "Press Enter to close window."
