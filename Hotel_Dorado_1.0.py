@@ -19,7 +19,7 @@ HP = 100
 XP = 0
 MONEY = 0
 
-def just_a_list_of_stages:
+def just_a_list_of_stages():
     print 
 
 def Quasimodo():
