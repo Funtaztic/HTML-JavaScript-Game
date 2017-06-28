@@ -45,7 +45,7 @@ def Quasimodo():
 
 def give_me_money():
     global MONEY
-    while True:
+    while MONEY >= 0:
         print "Please give me money!"
         print "How much would you give? :)"
         money_given = int(raw_input())
