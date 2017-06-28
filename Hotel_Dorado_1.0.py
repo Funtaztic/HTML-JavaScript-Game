@@ -16,11 +16,8 @@
 #       or just include stats_print in all functions.
 
 # Variables:
-global HP
 HP = 100
-global XP
 XP = 0
-global MONEY
 MONEY = 100
 money_given = 0
 
@@ -45,12 +42,15 @@ def Quasimodo():
 
 def give_me_money():
     global MONEY
+    global PoorJohnMoney
+    PoorJohnMoney = 0
     while MONEY >= 0:
-        print "Please give me money!"
+        print "Hi, I am PoorJohn. Please give me money! I have %r money now." % PoorJohnMoney
         print "How much would you give? :)"
         money_given = int(raw_input())
         MONEY = MONEY - money_given
-        print "HAHAHAH! I have %r money now!" % money_given
+        PoorJohnMoney = PoorJohnMoney + money_given
+        print "HAHAHAH! I have %r money now!" % PoorJohnMoney
         stats_print()
         
         
