@@ -20,10 +20,12 @@ HP = 100
 XP = 0
 MONEY = 100
 money_given = 0
+PoorJohnMoney = 0
 
 def just_a_list_of_stages():
     print "---------------"
-    print "Stages of the game:"
+    print "just_a_list_of_stages"
+    print "give_me_money"
     print "Quasimodo"
     print "end_game"
     print "stats_print"
@@ -43,16 +45,19 @@ def Quasimodo():
 def give_me_money():
     global MONEY
     global PoorJohnMoney
-    PoorJohnMoney = 0
-    while MONEY >= 0:
-        print "Hi, I am PoorJohn. Please give me money! I have %r money now." % PoorJohnMoney
-        print "How much would you give? :)"
-        money_given = int(raw_input())
-        MONEY = MONEY - money_given
-        PoorJohnMoney = PoorJohnMoney + money_given
-        print "HAHAHAH! I have %r money now!" % PoorJohnMoney
-        stats_print()
-        
+    if MONEY > 0:
+          print "Hi, I am PoorJohn. Please give me money! I have %r money now." % PoorJohnMoney
+          print "How much would you give? :)"
+          money_given = int(raw_input())
+          MONEY = MONEY - money_given
+          PoorJohnMoney = PoorJohnMoney + money_given
+          print "HAHAHAH! I have %r money now!" % PoorJohnMoney
+          stats_print()
+          give_me_money()
+    else: 
+      MONEY = 0
+      print "I have no more money! Goodbye"
+      Quasimodo()
         
 def end_game():
     stats_print()
@@ -66,4 +71,3 @@ def stats_print():
 
 give_me_money()
 just_a_list_of_stages()
-Quasimodo()
