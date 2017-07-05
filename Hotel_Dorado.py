@@ -22,15 +22,7 @@ MONEY = 100
 money_given = 0
 PoorJohnMoney = 0
 
-def just_a_list_of_stages():
-    print "---------------"
-    print "THE END...roll credits"
-    print "just_a_list_of_stages"
-    print "give_me_money"
-    print "Quasimodo"
-    print "end_game"
-    print "stats_print"
-    print "---------------"
+##########################################################################################################
 
 def Quasimodo():
     stats_print()
@@ -38,12 +30,12 @@ def Quasimodo():
     Quasimodo_answer = raw_input()
     if Quasimodo_answer == "yes":
         print "You are in! :D"
-        end_game()
+        PoorJohn() # here comes the PoorJohn part
     else:
         print "Then why are you here?"
         end_game()
 
-def give_me_money():
+def PoorJohn():
     global MONEY
     global PoorJohnMoney
     if MONEY > 0:
@@ -54,11 +46,13 @@ def give_me_money():
           PoorJohnMoney = PoorJohnMoney + money_given
           print "HAHAHAH! I have %r money now!" % PoorJohnMoney
           stats_print()
-          give_me_money()
+          PoorJohn()
     else: 
       MONEY = 0
       print "I have no more money! Goodbye"
-      Quasimodo()
+      end_game()
+        
+##########################################################################################################
         
 def end_game():
     stats_print()
@@ -70,5 +64,17 @@ def stats_print():
     print "XP:      %r" %XP
     print "MONEY:   %r" %MONEY
 
-give_me_money()
+def just_a_list_of_stages():
+    print "---------------"
+    print "THE END...roll credits"
+    print "just_a_list_of_stages"
+    print "give_me_money"
+    print "Quasimodo"
+    print "end_game"
+    print "stats_print"
+    print "---------------"
+    
+##########################################################################################################
+
+Quasimodo()
 just_a_list_of_stages()
