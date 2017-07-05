@@ -24,6 +24,7 @@ PoorJohnMoney = 0
 
 def just_a_list_of_stages():
     print "---------------"
+    print "THE END...roll credits"
     print "just_a_list_of_stages"
     print "give_me_money"
     print "Quasimodo"
