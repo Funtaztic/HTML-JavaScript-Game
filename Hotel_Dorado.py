@@ -15,16 +15,24 @@
 #   Make a variable: storyline. add +1 to proceed to next one? (bad idea?)
 #       or just include stats_print in all functions.
 
+##########################################################################################################
+
 # Variables:
+
+# Basic stats:
 HP = 100
 XP = 0
 MONEY = 100
+
 money_given = 0
 PoorJohnMoney = 0
 
-import time
+import time #this is needed for the time.sleep function to work!
 
 ##########################################################################################################
+
+def wait1():
+  time.sleep(1)
 
 def wait2():
   time.sleep(2)
@@ -74,11 +82,17 @@ def stats_print():
 def just_a_list_of_stages():
     print "---------------"
     print "THE END...roll credits"
+    wait1()
     print "just_a_list_of_stages"
+    wait1()
     print "give_me_money"
+    wait1()
     print "Quasimodo"
+    wait1()
     print "end_game"
+    wait1()
     print "stats_print"
+    wait1()
     print "---------------"
     
 ##########################################################################################################
