@@ -42,13 +42,17 @@ def Quasimodo():
     print "Hi, I'm Quasimodo. Do you want to go inside? (yes/no)"
     Quasimodo_answer = raw_input()
     if Quasimodo_answer == "yes":
-        print "You are in! :D"
-        PoorJohn() # here comes the PoorJohn part
+      print "You are in! :D"
+      PoorJohn() # here comes the PoorJohn part
+    elif Quasimodo_answer == "no":
+      print "Hm..."
+      wait2()
+      print "Then why are you here?"
+      end_game()  
     else:
-        print "Hm..."
-        wait2()
-        print "Then why are you here?"
-        end_game()
+      print "Ermm...what?"
+      wait2()
+      Quasimodo()
 
 #Let's make PoorJohn aggressive :D
 def PoorJohn():
