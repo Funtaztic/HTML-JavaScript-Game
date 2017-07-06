@@ -22,7 +22,12 @@ MONEY = 100
 money_given = 0
 PoorJohnMoney = 0
 
+import time
+
 ##########################################################################################################
+
+def wait2():
+  time.sleep(2)
 
 def Quasimodo():
     stats_print()
@@ -32,6 +37,8 @@ def Quasimodo():
         print "You are in! :D"
         PoorJohn() # here comes the PoorJohn part
     else:
+        print "Hm..."
+        wait2()
         print "Then why are you here?"
         end_game()
 
