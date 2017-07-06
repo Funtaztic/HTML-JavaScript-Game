@@ -50,18 +50,28 @@ def Quasimodo():
         print "Then why are you here?"
         end_game()
 
+#Let's make PoorJohn aggressive :D
 def PoorJohn():
+    global HP
     global MONEY
     global PoorJohnMoney
     if MONEY > 0:
           print "Hi, I am PoorJohn. Please give me money! I have %r money now." % PoorJohnMoney
           print "How much would you give? :)"
           money_given = int(raw_input())
-          MONEY = MONEY - money_given
-          PoorJohnMoney = PoorJohnMoney + money_given
-          print "HAHAHAH! I have %r money now!" % PoorJohnMoney
-          stats_print()
-          PoorJohn()
+          if money_given >= 10:
+            MONEY = MONEY - money_given
+            PoorJohnMoney = PoorJohnMoney + money_given
+            print "HAHAHAH! I have %r money now!" % PoorJohnMoney
+            stats_print()
+            PoorJohn()
+          else:
+            print "That's not enough! You fokkin CONT! *Punch in da face*"
+            HP = HP - 5
+            MONEY = MONEY - money_given
+            PoorJohnMoney = PoorJohnMoney + money_given
+            stats_print()
+            PoorJohn()
     else: 
       MONEY = 0
       print "I have no more money! Goodbye"
