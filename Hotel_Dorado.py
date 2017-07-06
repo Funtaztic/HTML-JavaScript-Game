@@ -65,9 +65,16 @@ def PoorJohn():
             print "HAHAHAH! I have %r money now!" % PoorJohnMoney
             stats_print()
             PoorJohn()
-          else:
+          if money_given < 10 and money_given > 0:
             print "That's not enough! You fokkin CONT! *Punch in da face*"
             HP = HP - 5
+            MONEY = MONEY - money_given
+            PoorJohnMoney = PoorJohnMoney + money_given
+            stats_print()
+            PoorJohn()
+          else:
+            print "What the fuck man?! *Shoots you in the leg*"
+            HP = HP - 30
             MONEY = MONEY - money_given
             PoorJohnMoney = PoorJohnMoney + money_given
             stats_print()
