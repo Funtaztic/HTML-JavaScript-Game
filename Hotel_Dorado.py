@@ -36,6 +36,9 @@ def wait1():
 
 def wait2():
   time.sleep(2)
+  
+def start_game():
+  Quasimodo()
 
 def Quasimodo():
     stats_print()
@@ -69,7 +72,7 @@ def PoorJohn():
             print "HAHAHAH! I have %r money now!" % PoorJohnMoney
             stats_print()
             PoorJohn()
-          if money_given < 10 and money_given > 0:
+          elif money_given < 10 and money_given > 0:
             print "That's not enough! You fokkin CONT! *Punch in da face*"
             HP = HP - 5
             MONEY = MONEY - money_given
@@ -118,5 +121,5 @@ def just_a_list_of_stages():
     
 ##########################################################################################################
 
-Quasimodo()
+start_game()
 just_a_list_of_stages()
