@@ -62,35 +62,50 @@ def PoorJohn():
     global HP
     global MONEY
     global PoorJohnMoney
-    if MONEY > 0:
+    money_given = 0
+    while MONEY > 0:
           print "Hi, I am PoorJohn. Please give me money! I have %r money now." % PoorJohnMoney
           print "How much would you give? :)"
           money_given = int(raw_input())
-          if money_given >= 10:
+          if money_given >= 10 and money_given <= MONEY:
             MONEY = MONEY - money_given
             PoorJohnMoney = PoorJohnMoney + money_given
             print "HAHAHAH! I have %r money now!" % PoorJohnMoney
             stats_print()
             PoorJohn()
-          elif money_given < 10 and money_given > 0:
+          elif money_given < 20 and money_given >= 10 and money_given <= MONEY:
             print "That's not enough! You fokkin CONT! *Punch in da face*"
             HP = HP - 5
             MONEY = MONEY - money_given
             PoorJohnMoney = PoorJohnMoney + money_given
             stats_print()
             PoorJohn()
-          else:
+          elif money_given < 10 and money_given > 0 and money_given <= MONEY:
             print "What the fuck man?! *Shoots you in the leg*"
             HP = HP - 30
             MONEY = MONEY - money_given
             PoorJohnMoney = PoorJohnMoney + money_given
             stats_print()
             PoorJohn()
-    else: 
-      MONEY = 0
-      print "I have no more money! Goodbye"
-      end_game()
-        
+          else:
+            print "I have no more money! Goodbye"
+            end_game()
+    else:
+      print "What am I doing? I do not even have that much money."
+      wait2()
+      print "Should I give him all the money I have?"
+      give_all_money = raw_input()
+      if give_all_money == "yes":
+        PoorJohnMoney = MONEY + PoorJohnMoney
+        MONEY = 0
+        end_game()
+      elif give_all_money == "no":
+        print "Ok, I have some money left."
+        stats_print()
+        end_game
+      
+      money_given = MONEY #this should make sure that the money_given is not more than the MONEY the player has.
+    
 ##########################################################################################################
         
 def end_game():
@@ -102,7 +117,8 @@ def stats_print():
     print "HP:      %r" %HP
     print "XP:      %r" %XP
     print "MONEY:   %r" %MONEY
-
+    print "PoorJohnMoney:   %r" %PoorJohnMoney
+    
 def just_a_list_of_stages():
     print "---------------"
     print "THE END...roll credits"
