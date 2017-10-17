@@ -1,5 +1,4 @@
 body {
-	font-family: Georgia, serif;
 	height: 100%;
 	margin: 0;
 	text-align: center;
@@ -8,9 +7,45 @@ body {
 
 h1 {
 	font-size: 32px;
+  font-family: Palatino, 'Palatino Linotype', serif;
+  color: rgb(121,149,117);
 }
 
 h2 {
-	color: #00FFAA;
-	font-size: 56px; 
+	font-size: 56px;
 }
+
+
+.hero {
+	padding: 250px 0;
+	margin: 30px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  background-image: url("https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg");
+  background-size: cover;
+  color: #ffffff;
+}
+
+.hero2 {
+	padding: 250px 0;
+	margin: 30px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  background-image: url("https://i.pinimg.com/736x/61/56/c9/6156c991bbdfbf9ec39df7a5a9ccd62f--funny-pictures-of-animals-funny-animal-memes.jpg");
+  background-size: cover;
+  color: #ffffff;
+}
+
+
+p {
+  font-size: 2rem;
+}
+
+.hero a {
+	color: #00FFAA;
+	font-size: 1.25em;
+	text-decoration: none;
+}
+
+#footer {
+  font-size: 0.75rem;
+}
+
